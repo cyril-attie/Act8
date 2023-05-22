@@ -1,0 +1,51 @@
+@host = http://localhost:3000
+
+###
+
+GET {{host}}/api/inmuebles
+
+###
+
+GET {{host}}/api/inmuebles/646a1aa263643ea339b4fb50
+
+
+###
+POST {{host}}/api/inmuebles
+Content-type: application/json  
+
+{
+    "piso": 2,
+    "letra": "A",
+    "superficieM2": 37,
+    "habitaciones": 2,
+    "alquilado": true,
+    "propietario": {
+        "nombre": "Propi",
+        "email": "propi@etar.io"
+    } 
+}
+
+###
+PUT {{host}}/api/inmuebles/646a1aa263643ea339b4fb50
+Content-type: application/json  
+
+{
+    "piso": 248573947,
+    "letra": "A",
+    "superficieM2": 37,
+    "habitaciones": 2,
+    "alquilado": true,
+    "propietario": {
+        "nombre": "Propi",
+        "email": "propietario@gmail.com"
+    } 
+}
+
+###
+DELETE {{host}}/api/inmuebles/646a1aa263643ea339b4fb50
+
+###
+
+DELETE {{host}}/api/inmuebles/all
+
+###
